@@ -2,14 +2,12 @@ version: '3.9'
 services:
   sistema_concrete_java:
     container_name: sistema_concrete_java_container
-    image: eduardotech/validador-cpf-java
+    build:
+      dockerfile: /c/Users/luis.costa/OneDrive - Accenture/Desktop/DevOps/Validador-CPF/Dockerfile
+      context: /c/Users/luis.costa/OneDrive - Accenture/Desktop/DevOps/Validador-CPF/.
+    image: eduardotech/validador-cpf-java2
     ports: 
-      - "3001:8080"
-  sistema_concrete_csharp:
-    container_name: sistema_concrete_csharp_container
-    image: eduardotech/validador-cpf-csharp
-    ports: 
-      - "3002:80"
+      - "3001:80"
 
 
 -------------------------------------------
